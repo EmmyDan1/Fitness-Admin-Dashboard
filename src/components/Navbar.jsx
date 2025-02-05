@@ -1,11 +1,12 @@
 import { AiOutlineBell, AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 import PropTypes from "prop-types";
+import DarkModeToggle from "./DarkModeToggle";
 
 function Navbar({ toggleSidebar }) {
   const profileImage = "https://randomuser.me/api/portraits/men/45.jpg";
 
   return (
-    <div className="bg-white text-white p-4 shadow-md flex justify-between items-center">
+    <div className="bg-white text-white p-4 shadow-md flex justify-between items-center dark:bg-gray-800 text-gray-900 dark:text-white">
       <button className="text-white text-2xl md:hidden" onClick={toggleSidebar}>
         <AiOutlineMenu className="hidden" />
       </button>
@@ -21,8 +22,12 @@ function Navbar({ toggleSidebar }) {
         <AiOutlineSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
       </div>
 
+     
       <div className="flex items-center space-x-4">
-        {/* Bell Icon */}
+        <DarkModeToggle />
+      </div>
+
+      <div className="flex items-center space-x-4">
         <button className="relative hover:text-blue-400 transition">
           <AiOutlineBell className="w-6 h-6 text-black" />
           <span className="absolute top-0 right-0 bg-red-500 text-xs px-2 rounded-full">
