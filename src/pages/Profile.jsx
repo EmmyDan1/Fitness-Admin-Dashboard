@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mockUser from "../data/MockUser";
+import mockUser from "../data/mockUser";
 import Card from "../components/Common/Card";
 import Button from "../components/Common/Button";
 
