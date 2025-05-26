@@ -1,4 +1,4 @@
-import mockUser from "../data/mockUser";
+import mockUser from "../../data/mockUser";
 
 const Navbar = ({ toggleSidebar }) => {
   return (
